@@ -1,0 +1,23 @@
+:root {
+    --lightTan: #e3e0cf;
+    --dimgreen: #c5d5cb;
+    --dark-color: #9fa8a3;
+    --light-color: #c4c4c4;
+}
+
+body {
+    background-color: var(--lightTan);
+}
+h1 {    
+    color: var(--dark-color);
+    font-size: 40px;
+}
+
+#main-frame {
+    background-color: var(--dimgreen);
+    height: 430px;
+    width: 905px;
+    border-radius: 10px;
+    border: 2px solid var(--dark-color);
+    
+}
