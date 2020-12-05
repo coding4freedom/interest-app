@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Interest from './InterestComponent';
 import '../css/frame.css';
 
 class Frame extends Component  {
@@ -17,7 +18,7 @@ class Frame extends Component  {
                             <h1>Pick A Subject of Interest</h1>
                         </div>
                         <div className='col' id='main-frame'>
-
+                            <Interest />
                         </div>
                     </div>
                 </div>
