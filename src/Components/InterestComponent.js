@@ -2,17 +2,25 @@ import { Card, CardImg, CardTitle, CardBody} from 'reactstrap';
 import React, { Component } from 'react';
 import pokeImg from '../img/pokemon.PNG';
 import { POKEMON } from '../interest/pokemon';
+import "bootstrap/dist/css/bootstrap.min.css";
+import '../css/frame.css';
 
 /* this component should load a interest and store the  */
 function RenderCard({ subject }) {
     const name = subject.map(sub => ( sub.poke ));
     return (
-        <Card>
-            <CardBody>
-                <CardTitle>{name}</CardTitle>
-            </CardBody>
-            <CardImg src={pokeImg} alt={name}/>
-        </Card>
+        <div>
+            <Card style={{ height: '10rem' }}>
+                <CardBody>
+                    <CardTitle tag="h4">{name}</CardTitle>
+                </CardBody>
+                <CardImg
+                    bottom
+                    width="100%"
+                    src={pokeImg}
+                    alt={name} />
+            </Card>
+        </div>
     );
 }
 

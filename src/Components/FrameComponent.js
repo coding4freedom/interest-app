@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import Interest from './InterestComponent';
+import "bootstrap/dist/css/bootstrap.min.css";
 import '../css/frame.css';
 
 class Frame extends Component  {
-    constructor(props) {
+   /* constructor(props) {
         super(props)            
     
         
-    }
+    } */
     
     render(){
         return(
