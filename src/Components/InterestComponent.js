@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import '../css/frame.css';
 
 /* this component should load a interest and store the  */
-<<<<<<< HEAD
+
 /* function RenderCard({ subject }) {
     const card = subject.map(sub => {
         return (
@@ -40,7 +40,7 @@ function RenderCard( {subject} ){
         return sub.img
     });
 
-    return(
+    return (
         <div className="container">
             <div className="row">
                 <div className="col">
@@ -52,22 +52,6 @@ function RenderCard( {subject} ){
                     </Card>
                 </div>
             </div>
-=======
-function RenderCard({ subject }) {
-    const name = subject.map(sub => ( sub.poke ));
-    return (
-        <div>
-            <Card style={{ height: '10rem' }}>
-                <CardBody>
-                    <CardTitle tag="h4">{name}</CardTitle>
-                </CardBody>
-                <CardImg
-                    bottom
-                    width="100%"
-                    src={pokeImg}
-                    alt={name} />
-            </Card>
->>>>>>> 76eb57fee78ef43e209cf2714788071a155c6840
         </div>
     );
 }

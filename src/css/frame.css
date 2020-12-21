@@ -14,9 +14,14 @@
 body {
     background-color: var(--lightTan);
 }
+
 h1 {    
     color: var(--dark-color);
     font-size: 40px;
+}
+
+.frame-bound {
+    padding: 25px 50px;
 }
 
 #main-frame {
@@ -29,12 +34,12 @@ h1 {
     justify-content: space-around;
 }
 
-<<<<<<< HEAD
 .main {
     display: flex;
     justify-content: center;
     align-items: center;
-=======
+}
+
 .card-style {
     width: 100%;
     height: 100px;
@@ -43,5 +48,5 @@ h1 {
     font-size: 1.5rem;
     text-align: center;
     border: 1px solid black;
->>>>>>> 76eb57fee78ef43e209cf2714788071a155c6840
+
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Interest from './InterestComponent';
-import "bootstrap/dist/css/bootstrap.min.css";
+import { Container, Row, Col } from 'react-bootstrap';
 import '../css/frame.css';
 
 class Frame extends Component  {
@@ -12,17 +12,17 @@ class Frame extends Component  {
     
     render(){
         return(
-            <div className='main'>
-                <div className='container'>
-                    <div className='row'>
-                        <div className='col'>
+            <div className='main frame-bound'>
+                <Container fluid>
+                    <Row>
+                        <Col xs={12} className="main">
                             <h1>Pick A Subject of Interest</h1>
-                        </div>
-                        <div className='col' id='main-frame'>
+                        </Col>
+                        <Col id='main-frame'>
                             <Interest />
-                        </div>
-                    </div>
-                </div>
+                        </Col>
+                    </Row>
+                </Container>
             </div>
         );
     }
