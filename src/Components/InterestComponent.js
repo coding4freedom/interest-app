@@ -4,15 +4,52 @@ import pokeImg from '../img/pokemon.PNG';
 import { POKEMON } from '../interest/pokemon';
 
 /* this component should load a interest and store the  */
-function RenderCard({ subject }) {
-    const name = subject.map(sub => ( sub.poke ));
-    return (
-        <Card>
-            <CardBody>
-                <CardTitle>{name}</CardTitle>
-            </CardBody>
-            <CardImg src={pokeImg} alt={name}/>
-        </Card>
+/* function RenderCard({ subject }) {
+    const card = subject.map(sub => {
+        return (
+            <div className="container">
+                <div className="row">
+                    <div className="col">
+                        <Card>
+                            <CardBody>
+                                <CardTitle>{sub.title}</CardTitle>
+                            </CardBody>
+                            <CardImg src={sub.img} alt={sub.title}/>
+                        </Card>
+                    </div>
+                </div>
+            </div>
+        );
+    })
+    return(
+        <React.Fragment>
+            {card}
+        </React.Fragment>
+        );
+} */
+
+function RenderCard( {subject} ){
+    const title = subject.map( sub => {
+        return sub.title
+    });
+
+    let img = subject.map( sub => {
+        return sub.img
+    });
+
+    return(
+        <div className="container">
+            <div className="row">
+                <div className="col">
+                    <Card>
+                        <CardBody>
+                            <CardTitle>{title}</CardTitle>
+                        </CardBody>
+                        <CardImg src={img} alt={title} />
+                    </Card>
+                </div>
+            </div>
+        </div>
     );
 }
 
@@ -23,10 +60,12 @@ class Interest extends Component {
     
         this.state = {
             options: [
-                { none: ''},
-                { poke: 'POKEMON'}
-            ],
-            pokemon: POKEMON           
+                { none: '' },
+                { title: 'POKEMON' },
+                { interest: POKEMON },
+                { featured: true },
+                { img: pokeImg }
+            ]                               
         }
     
         //this.handleEvent = this.handleEvent.bind(this)

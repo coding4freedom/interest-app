@@ -11,7 +11,7 @@ class Frame extends Component  {
     
     render(){
         return(
-            <React.Fragment>
+            <div className='main'>
                 <div className='container'>
                     <div className='row'>
                         <div className='col'>
@@ -22,7 +22,7 @@ class Frame extends Component  {
                         </div>
                     </div>
                 </div>
-            </React.Fragment>
+            </div>
         );
     }
 }
