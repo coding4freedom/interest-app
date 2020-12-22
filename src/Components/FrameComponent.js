@@ -13,7 +13,7 @@ class Frame extends Component  {
     render(){
         return(
             <div className='main frame-bound'>
-                <Container fluid>
+                <Container>
                     <Row>
                         <Col xs={12} className="main">
                             <h1>Pick A Subject of Interest</h1>

@@ -1,8 +1,8 @@
-import { Card, CardImg, CardTitle, CardBody} from 'reactstrap';
+import { Card, CardImg, CardTitle, CardBody } from 'reactstrap';
 import React, { Component } from 'react';
-import pokeImg from '../img/pokemon.PNG';
+import { Container, Row, Col } from 'react-bootstrap';
+import pokeImg from '../img/pokemon.PNG'; 
 import { POKEMON } from '../interest/pokemon';
-import "bootstrap/dist/css/bootstrap.min.css";
 import '../css/frame.css';
 
 /* this component should load a interest and store the  */
@@ -30,29 +30,29 @@ import '../css/frame.css';
         </React.Fragment>
         );
 } */
-
+// the problem is 5 items are being returned in the array all undefined except the title and img
 function RenderCard( {subject} ){
     const title = subject.map( sub => {
         return sub.title
     });
-
+    console.log(title)
     let img = subject.map( sub => {
         return sub.img
     });
-
+    // console.log(img);
     return (
-        <div className="container">
-            <div className="row">
-                <div className="col">
+        <Container>
+            <Row>
+                <Col>
                     <Card>
                         <CardBody>
                             <CardTitle>{title}</CardTitle>
                         </CardBody>
                         <CardImg src={img} alt={title} />
                     </Card>
-                </div>
-            </div>
-        </div>
+                </Col>
+            </Row>
+        </Container>
     );
 }
 
