@@ -7,34 +7,11 @@ import '../css/frame.css';
 
 /* this component should load a interest and store the  */
 
-/* function RenderCard({ subject }) {
-    const card = subject.map(sub => {
-        return (
-            <div className="container">
-                <div className="row">
-                    <div className="col">
-                        <Card>
-                            <CardBody>
-                                <CardTitle>{sub.title}</CardTitle>
-                            </CardBody>
-                            <CardImg src={sub.img} alt={sub.title}/>
-                        </Card>
-                    </div>
-                </div>
-            </div>
-        );
-    })
-    return(
-        <React.Fragment>
-            {card}
-        </React.Fragment>
-        );
-} */
-// the problem is 5 items are being returned in the array all undefined except the title and img
+
 function RenderCard( {subject} ){
     const title = subject.filter(sub => {
         return 'title' in sub
-    })[0].title;
+    })[0].title; // this line is the part we struggled on once we have the condition met we want to point to first item thru []
     
     let img = subject.filter( sub => {
         return'img' in sub
@@ -44,17 +21,18 @@ function RenderCard( {subject} ){
         <Container>
             <Row>
                 <Col>
-                    <Card>
-                        <CardBody>
+                    <Card className='card-size'>
+                        <CardBody className='main'>
                             <CardTitle>{title}</CardTitle>
                         </CardBody>
-                        <CardImg src={img} alt={title} />
+                        <CardImg src={img} alt={title} className='card-img' />
                     </Card>
                 </Col>
             </Row>
         </Container>
     );
 }
+
 
 class Interest extends Component {    
 

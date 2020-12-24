@@ -18,7 +18,7 @@ class Frame extends Component  {
                         <Col xs={12} className="main">
                             <h1>Pick A Subject of Interest</h1>
                         </Col>
-                        <Col id='main-frame'>
+                        <Col id='main-frame' className='main'>
                             <Interest />
                         </Col>
                     </Row>
