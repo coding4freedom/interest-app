@@ -32,13 +32,13 @@ import '../css/frame.css';
 } */
 // the problem is 5 items are being returned in the array all undefined except the title and img
 function RenderCard( {subject} ){
-    const title = subject.map( sub => {
-        return sub.title
-    });
-    console.log(title)
-    let img = subject.map( sub => {
-        return sub.img
-    });
+    const title = subject.filter(sub => {
+        return 'title' in sub
+    })[0].title;
+    
+    let img = subject.filter( sub => {
+        return'img' in sub
+    })[0].img;
     // console.log(img);
     return (
         <Container>
