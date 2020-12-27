@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Interest from './InterestComponent';
+import Menu from './MenuComponent';
 import { Container, Row, Col } from 'react-bootstrap';
 import '../css/frame.css';
 
@@ -20,6 +21,7 @@ class Frame extends Component  {
                         </Col>
                         <Col id='main-frame' className='main'>
                             <Interest />
+                            <Menu />
                         </Col>
                     </Row>
                 </Container>

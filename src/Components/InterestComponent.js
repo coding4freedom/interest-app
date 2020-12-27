@@ -40,13 +40,10 @@ class Interest extends Component {
         super(props)
     
         this.state = {
-            options: [
-                { none: '' },
-                { title: 'POKEMON' },
-                { interest: POKEMON },
-                { featured: true },
+            options: [                
+                { title: 'POKEMON' },                               
                 { img: pokeImg }
-            ]                               
+            ]                                           
         }
     
         //this.handleEvent = this.handleEvent.bind(this)

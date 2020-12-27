@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import Frame from './Components/FrameComponent'
 import './App.css';
 
